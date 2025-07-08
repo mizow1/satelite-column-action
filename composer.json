@@ -1,0 +1,21 @@
+{
+    "name": "uranai/common-column-lib",
+    "description": "共通コラム機能ライブラリ - 100サイトで使用可能",
+    "type": "library",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uranai\\Column\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Uranai Development Team",
+            "email": "dev@uranai.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
