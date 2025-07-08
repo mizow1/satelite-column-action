@@ -1,0 +1,23 @@
+name: Deploy to All Sites
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        site: 
+          - nomorikeit-irish-harp.com
+          - site2.example.com
+          - site3.example.com
+          # 実際の100サイト分を追加
+    
+    steps:
+      - name: Deploy to ${{ matrix.site }}
+        run: |
+          echo "Deploying to ${{ matrix.site }}..."
+          ssh ${{ matrix.site }} "cd /var/www && git clone https://github.com/mizow1/satelite-column-action.git common-column-lib || (cd common-column-lib && git pull origin master)"
