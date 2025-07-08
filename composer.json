@@ -1,8 +1,14 @@
 {
-    "name": "uranai/common-column-lib",
-    "description": "共通コラム機能ライブラリ - 100サイトで使用可能",
+    "name": "uranai/column-lib",
+    "description": "占いサイト共通コラム機能ライブラリ",
     "type": "library",
     "version": "1.0.0",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mizow1/satelite-column-action.git"
+        }
+    ],
     "require": {
         "php": ">=7.0"
     },
@@ -10,12 +16,5 @@
         "psr-4": {
             "Uranai\\Column\\": "src/"
         }
-    },
-    "authors": [
-        {
-            "name": "Uranai Development Team",
-            "email": "dev@uranai.com"
-        }
-    ],
-    "minimum-stability": "stable"
+    }
 }
